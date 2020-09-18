@@ -8,6 +8,10 @@ This simple package assists with determining what Operating System your code is 
 composer require anteris-dev/os-helper:dev-master
 ```
 
+## Find an OS that is missing?
+
+We would love to see your contribution to this package to make it better for its users. Feel free to make a pull request to add any missing Operating Systems you stumble across.
+
 # Boolean Checks
 
 You can use the `isLinux()`, `isMacOs()`, and `isWindows()` methods to run simple boolean checks about the OS.
