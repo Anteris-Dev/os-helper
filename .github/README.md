@@ -42,7 +42,9 @@ For example:
 
 use Anteris\Helper\OS;
 
+
 // On a Mac machine, this would output: Mac OS
+
 echo OS::name();
 
 ```
@@ -57,7 +59,9 @@ For example:
 
 use Anteris\Helper\OS;
 
+
 // On a Mac machine, this would output: macos
+
 echo OS::shortName();
 
 ```
