@@ -2,6 +2,11 @@
     "name": "anteris-dev/os-helper",
     "description": "Provides basic helpers for Operating System names.",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Anteris\\Helper\\": "./src"
+        }
+    },
     "authors": [
         {
             "name": "Aidan Casey",
