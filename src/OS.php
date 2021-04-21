@@ -10,44 +10,41 @@ namespace Anteris\Helper;
  */
 class OS
 {
-    /***************************************************************************
-     *
-     * The is series of commands return a boolean determining whether the
-     * assumption is true (e.g. isWindows will return true if a Windows machine,
-     * or false otherwise.)
-     *
-     **************************************************************************/
-
-    /**
-     * Returns true if the operating system is determined to be Linux.
-     */
     public static function isLinux(): bool
     {
         return (self::shortName() === 'linux');
     }
 
-    /**
-     * Returns true if the operating system is determined to be Mac OS.
-     */
+    public static function ifLinux(callable $callback): void
+    {
+        if (static::isLinux()) {
+            $callback();
+        }
+    }
+
     public static function isMacOs()
     {
         return (self::shortName() === 'macos');
     }
 
-    /**
-     * Returns true if the operating system is determined to be Windows.
-     */
+    public static function ifMacOs(callable $callback): void
+    {
+        if (static::isMacOs()) {
+            $callback();
+        }   
+    }
+
     public static function isWindows(): bool
     {
         return (self::shortName() === 'windows');
     }
 
-    /***************************************************************************
-     *
-     * These getters return an opinionated idea about what operating system we
-     * are running on.
-     *
-     **************************************************************************/
+    public static function ifWindows(callable $callback): void
+    {
+        if (static::isWindows()) {
+            $callback();
+        }
+    }
 
     /**
      * Returns the OS name in a friendly manner, for user display.
