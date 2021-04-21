@@ -5,7 +5,7 @@ This simple package assists with determining what Operating System your code is 
 ## To Install
 
 ```bash
-composer require anteris-dev/os-helper:dev-master
+composer require anteris-dev/os-helper
 ```
 
 ## Find an OS that is missing?
@@ -33,6 +33,30 @@ if ( OS::isMacOs() ) {
 if ( OS::isWindows() ) {
     echo 'Running on Windows!';
 }
+
+```
+
+# If Statements
+
+To make the above examples more fluent, you may also use the if methods to perform if statements.
+
+For example:
+
+```php
+
+use Anteris\Helper\OS;
+
+OS::ifLinux(function () {
+    echo 'Running on Linux!';
+});
+
+OS::ifMacOs(function () {
+    echo 'Running on Mac!';
+});
+
+Os::ifWindows(function () {
+    echo 'Running on Windows!';
+});
 
 ```
 
