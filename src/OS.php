@@ -31,7 +31,7 @@ class OS
     {
         if (static::isMacOs()) {
             $callback();
-        }   
+        }
     }
 
     public static function isWindows(): bool
